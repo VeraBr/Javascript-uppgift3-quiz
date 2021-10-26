@@ -6,17 +6,18 @@ let checkboxButtons = document.querySelectorAll('[type="checkbox"]'); //Checkbox
 let container = document.querySelector("#result"); // Element för att skriva ut resultat.
 
 let changeColorButton = document.querySelector("#changeColor");
+let body = document.querySelector("body");
+
 
 // Ändrar bakgrunds-och textfärg.
 changeColorButton.addEventListener("click", () => {
-    let body = document.querySelector("body");
 
-    if (body.style.background === "black") {
-        body.style.background = "white";
-        body.style.color = "black";
+    if (body.style.background === "teal") {
+        body.style.background = "lightblue";
+        body.style.color = "darkslategrey";
         document.getElementById("changeColor").innerHTML = "Dark mode";
     } else {
-        body.style.background = "black";
+        body.style.background = "teal";
         body.style.color = "lightgrey";
         document.getElementById("changeColor").innerHTML = "Light mode";
     }
@@ -25,6 +26,7 @@ changeColorButton.addEventListener("click", () => {
 let totalCorrectAmount = 10; 
 
 resultButton.addEventListener("click", () => {
+    container.innerHTML = "";
     let pointsRadio = 0;
     let pointsCheckbox = 0;
 
@@ -53,7 +55,7 @@ resultButton.addEventListener("click", () => {
 
 
     // Räknar ut hur många rutor som är ifyllda. 
-    let buttonsId = document.querySelectorAll('[id=answer]');
+    let buttonsId = document.querySelectorAll("input"); 
     let arr = [];
     for(let i = 0; i < buttonsId.length; i++){
         let buttonsChecked = buttonsId[i].checked;
@@ -67,8 +69,8 @@ resultButton.addEventListener("click", () => {
 
 
 
-    // Skriver ut poängen i DOMen och ser till att tillräckligt många rutor är ifyllda.
-    if(boxesChecked < 11){
+    // Skriver ut poängen i DOMen och ser till att alla frågor är svarade på.
+    if(boxesChecked < 10){
         alert("checka i alla rutor");
     } else if (totalPoints > 7){
         let result = document.createElement("p");
@@ -82,7 +84,7 @@ resultButton.addEventListener("click", () => {
         container.appendChild(result);
     } else {
         let result = document.createElement("p");
-        result.innerText = `Du fick ${totalPoints} rätt`;
+        result.innerText = `Du fick ${totalPoints} rätt`; 
         container.appendChild(result);
     }
 });
