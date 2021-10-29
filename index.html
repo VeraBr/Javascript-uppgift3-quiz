@@ -27,153 +27,160 @@
         font-size: 16px;
         color: darkslategrey;
     }
+    div.resultOutput {
+        position: fixed;
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+    }
 </style>
 </head>
 <body>
-    <h3>Ankademin Quiz</h3>
+    <h1>Ord-quiz</h1>
+    <h3>Vad betyder orden?</h3>
     <button class="changeColor" id="changeColor" type="button">Dark mode</button>
     <button class="reload" onClick="location.reload();">Ladda om sidan</button>
     
     <div>
-        &nbsp; 
         <div>
-        <legend for="question1">Fråga 1</legend>
+        <h3>1. Anekdot</h3>
 
         <label>
-            <input type="radio" name="question1" value="correct" id="answer">Ett
+            <input type="radio" name="question1" value="correct" id="answer">Kort berättelse
         </label>
         <label>
-            <input type="radio" name="question1" value="wrong" id="answer">Två
+            <input type="radio" name="question1" value="wrong" id="answer">Noggrann redogörelse
         </label>
         <label>
-            <input type="radio" name="question1" value="wrong" id="answer">Tre
+            <input type="radio" name="question1" value="wrong" id="answer">Gissning
         </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question2">Fråga 2</legend>
+            <h3>2. Avsevärt</h3>
             <label>
-                <input type="radio" name="question2" value="correct" id="answer">Ett
+                <input type="radio" name="question2" value="wrong" id="answer">Ganska
             </label>
             <label>
-                <input type="radio" name="question2" value="wrong" id="answer">Två
+                <input type="radio" name="question2" value="correct" id="answer">Betydligt
             </label>
             <label>
-                <input type="radio" name="question2" value="wrong" id="answer">Tre
+                <input type="radio" name="question2" value="wrong" id="answer">Fullständigt
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question3">Fråga 3</legend>
+            <h3>3. Gastkramande</h3>
             <label>
-                <input type="radio" name="question3" value="correct" id="answer">Ett
+                <input type="radio" name="question3" value="wrong" id="answer">Farlig
             </label>
             <label>
-                <input type="radio" name="question3" value="wrong" id="answer">Två
+                <input type="radio" name="question3" value="correct" id="answer">Spännande
             </label>
             <label>
-                <input type="radio" name="question3" value="wrong" id="answer">Tre
+                <input type="radio" name="question3" value="wrong" id="answer">Livrädd
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question4">Fråga 4</legend>
+            <h3>4. Sargad</h3>
             <label>
-                <input type="radio" name="question4" value="correct" id="answer">Ett
+                <input type="radio" name="question4" value="wrong" id="answer">Upprörd
             </label>
             <label>
-                <input type="radio" name="question4" value="wrong" id="answer">Två
+                <input type="radio" name="question4" value="wrong" id="answer">Straffad
             </label>
             <label>
-                <input type="radio" name="question4" value="wrong" id="answer">Tre
+                <input type="radio" name="question4" value="correct" id="answer">Skadad
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question5">Fråga 5</legend>
+            <h3>5. Affekt</h3>
             <label>
-                <input type="radio" name="question5" value="correct" id="answer">Ett
+                <input type="radio" name="question5" value="wrong" id="answer">Känslokyla
             </label>
             <label>
-                <input type="radio" name="question5" value="wrong" id="answer">Två
+                <input type="radio" name="question5" value="correct" id="answer">Stark sinnesrörelse
             </label>
             <label>
-                <input type="radio" name="question5" value="wrong" id="answer">Tre
+                <input type="radio" name="question5" value="wrong" id="answer">Stor glädje
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question6">Fråga 6</legend>
+            <h3>6. Åtnjuta</h3>
             <label>
-                <input type="radio" name="question6" value="correct" id="answer">Ett
+                <input type="radio" name="question6" value="wrong" id="answer">Ta
             </label>
             <label>
-                <input type="radio" name="question6" value="wrong" id="answer">Två
+                <input type="radio" name="question6" value="wrong" id="answer">Ge
             </label>
             <label>
-                <input type="radio" name="question6" value="wrong" id="answer">Tre
+                <input type="radio" name="question6" value="correct" id="answer">Ha
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question7">Fråga 7</legend>
+            <h3>7. Insinuera</h3>
             <label>
-                <input type="radio" name="question7" value="correct" id="answer">Ett
+                <input type="radio" name="question7" value="wrong" id="answer">Gissa
             </label>
             <label>
-                <input type="radio" name="question7" value="wrong" id="answer">Två
+                <input type="radio" name="question7" value="wrong" id="answer">Ljuga
             </label>
             <label>
-                <input type="radio" name="question7" value="wrong" id="answer">Tre
+                <input type="radio" name="question7" value="correct" id="answer">Antyda
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question8">Fråga 8</legend>
+            <h3>8. Obstinat</h3>
             <label>
-                <input type="radio" name="question8" value="correct" id="answer">Ett
+                <input type="radio" name="question8" value="correct" id="answer">Trotsig
             </label>
             <label>
-                <input type="radio" name="question8" value="wrong" id="answer">Två
+                <input type="radio" name="question8" value="wrong" id="answer">Slarvig
             </label>
             <label>
-                <input type="radio" name="question8" value="wrong" id="answer">Tre
+                <input type="radio" name="question8" value="wrong" id="answer">Okunnig
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question9">Fråga 9</legend>
+            <h3>9. Hänryckt</h3>
             <label>
-                <input type="radio" name="question9" value="correct" id="answer">Ett
+                <input type="radio" name="question9" value="correct" id="answer">I extas
             </label>
             <label>
-                <input type="radio" name="question9" value="wrong" id="answer">Två
+                <input type="radio" name="question9" value="wrong" id="answer">I fara
             </label>
             <label>
-                <input type="radio" name="question9" value="wrong" id="answer">Tre
+                <input type="radio" name="question9" value="wrong" id="answer">I kris
             </label>
         </div>
-        &nbsp; 
+        
         <div>
-            <legend for="question10">Fråga 10</legend>
+            <h3>10. Vilka ord är synonymer till arrogant? (Två rätta svar)</h3>
             <label>
-                <input type="checkbox" name="answer1" id="answer" value="correct">Ett
+                <input type="checkbox" name="answer1" id="answer" value="correct">Överlägsen
             </label>
             <label>
-                <input type="checkbox" name="answer2" id="answer" value="correct">Två
+                <input type="checkbox" name="answer2" id="answer" value="wrong">Irriterande
             </label>
             <label>
-                <input type="checkbox" name="answer3" id="answer" value="wrong">Tre
+                <input type="checkbox" name="answer3" id="answer" value="wrong">Avvisande
             </label>
             <label>
-                <input type="checkbox" name="answer4" id="answer" value="wrong">Fyra
+                <input type="checkbox" name="answer4" id="answer" value="correct">Dryg
             </label>
         </div>
-        &nbsp; 
+        <br></br>
         <div>
             <button class="checkAnswer" id="check">Check answers</button>
         </div>
-        <div id="result"></div>
+        <div class="resultOutput" id="result"></div><br></br>
     </div>
     
     <script src="main.js"></script>

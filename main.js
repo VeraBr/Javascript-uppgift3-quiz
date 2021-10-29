@@ -23,8 +23,6 @@ changeColorButton.addEventListener("click", () => {
     }
 });
 
-let totalCorrectAmount = 10; 
-
 resultButton.addEventListener("click", () => {
     container.innerHTML = "";
     let pointsRadio = 0;
@@ -40,9 +38,9 @@ resultButton.addEventListener("click", () => {
     
     checkboxButtons.forEach(button => {
         let correctAnswer1 = document.querySelector("input[name='answer1']:checked");
-        let correctAnswer2 = document.querySelector("input[name='answer2']:checked");
+        let correctAnswer2 = document.querySelector("input[name='answer4']:checked");
         let wrongAnswer1 = document.querySelector("input[name='answer3']:checked");
-        let wrongAnswer2 = document.querySelector("input[name='answer4']:checked");
+        let wrongAnswer2 = document.querySelector("input[name='answer2']:checked");
 
         if((correctAnswer1 && correctAnswer2) && (!wrongAnswer1 && !wrongAnswer2)) {
             console.log(correctAnswer1);
@@ -71,20 +69,20 @@ resultButton.addEventListener("click", () => {
 
     // Skriver ut poängen i DOMen och ser till att alla frågor är svarade på.
     if(boxesChecked < 10){
-        alert("checka i alla rutor");
+        alert("Svara på alla frågor innan du kollar svaren");
     } else if (totalPoints > 7){
-        let result = document.createElement("p");
-        result.innerText = `Du fick ${totalPoints} rätt`;
-        result.style.color = "green";
+        let result = document.createElement("h1");
+        result.innerText = `Du fick ${totalPoints} av 10 rätt`;
+        result.style.color = "#17B169";
         container.appendChild(result);
-    } else if (totalPoints > totalCorrectAmount/2) {
-        let result = document.createElement("p");
-        result.innerText = `Du fick ${totalPoints} rätt`;
+    } else if (totalPoints > 5) {
+        let result = document.createElement("h1");
+        result.innerText = `Du fick ${totalPoints} av 10 rätt`;
         result.style.color = "orange";
         container.appendChild(result);
     } else {
-        let result = document.createElement("p");
-        result.innerText = `Du fick ${totalPoints} rätt`; 
+        let result = document.createElement("h1");
+        result.innerText = `Du fick ${totalPoints} av 10 rätt`; 
         container.appendChild(result);
     }
 });
